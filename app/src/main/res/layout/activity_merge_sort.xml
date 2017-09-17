@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nearur.daa.MergeSort">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.nearur.daa.MergeSort">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.nearur.daa.MergeSort">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="48dp"
+        android:textColor="@color/colorPrimary"
+        android:text="Merge Sort" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/editTextmergelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter List(Comma Seperated)" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textViewmergeresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:text="TextView" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/buttonmerge"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Merge Sort" />
+
+    <CheckedTextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/checkedTextViewalgo"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textColor="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:text="CheckedTextView" />
+</LinearLayout>
+</android.support.v7.widget.CardView>
+    </ScrollView>

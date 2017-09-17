@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nearur.daa.SortIS">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="com.nearur.daa.SortIS">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.nearur.daa.SortIS">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="Sorting" />
+
+    <EditText
+        android:id="@+id/editTextlist"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@android:color/holo_purple"
+        android:inputType="textPersonName"
+        android:hint="Enter List(Comma Seperated)" />
+
+    <TextView
+        android:id="@+id/textViewresult"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/buttoni"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="Insertion Sort" />
+
+    <Button
+        android:id="@+id/buttons"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="Selection Sort" />
+
+    <CheckedTextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/checkedTextViewdetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:visibility="gone"
+       />
+</LinearLayout>
+</android.support.v7.widget.CardView>
+    </ScrollView>

@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -113,6 +114,10 @@ public class MainActivity extends AppCompatActivity
         listView=(ListView)findViewById(R.id.listview);
         arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
         arrayAdapter.add("Search\nLinear & Binary");
+        arrayAdapter.add("Sorting\nInsertion & Selection");
+        arrayAdapter.add("Sorting\nMerge Sort");
+        arrayAdapter.add("Sorting\nQuick Sort");
+        arrayAdapter.add("Greedy Algorithm\nKnapSack Problem");
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -122,6 +127,18 @@ public class MainActivity extends AppCompatActivity
                     case 0:
                         intent=new Intent(MainActivity.this,SearchLB.class);
                         break;
+                    case 1:
+                        intent=new Intent(MainActivity.this,SortIS.class);
+                        break;
+
+                    case 2:
+                        intent=new Intent(MainActivity.this,MergeSort.class);
+                        break;
+
+                    case 3:
+                        intent=new Intent(MainActivity.this,QuickSort.class);
+                        break;
+
                 }
                 startActivity(intent);
             }

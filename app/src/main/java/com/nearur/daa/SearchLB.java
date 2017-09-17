@@ -19,6 +19,7 @@ public class SearchLB extends AppCompatActivity {
     EditText list,item;
     Button linear,binary;
     TextView textView;
+    int count=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,22 +37,22 @@ public class SearchLB extends AppCompatActivity {
                 boolean found=false;
                 if(list.getText().toString().length()>0&&item.getText().length()>0){
                     long start=System.currentTimeMillis();
-                    String[] listvalues=list.getText().toString().trim().split(" ");
+                    String[] listvalues=list.getText().toString().trim().split(",");
                     int idx=0;
                     for(String x:listvalues){
-                        if(x.equals(item.getText().toString())){
+                        idx++;
+                        if(x.trim().equals(item.getText().toString())){
                             found=true;
                             break;
                         }
-                        idx++;
                     }
                     AlertDialog.Builder builder=new AlertDialog.Builder(SearchLB.this);
                     builder.setTitle("Linear Search");
                     long finish=System.currentTimeMillis();
                     if (found){
-                        builder.setMessage("\'"+item.getText().toString()+"\'"+" found at "+(idx+1)+" position "+"\nTime taken "+(finish-start)+" milliseconds");
+                        builder.setMessage("\'"+item.getText().toString()+"\'"+" found at "+idx+" position "+"\nTime taken "+(finish-start)+" milliseconds"+"\nNo. of Comparisons : "+idx);
                     }else{
-                        builder.setMessage("\'"+item.getText().toString()+"\'"+" not found"+"\nTime taken "+(finish-start)+" milliseconds");
+                        builder.setMessage("\'"+item.getText().toString()+"\'"+" not found"+"\nTime taken "+(finish-start)+" milliseconds"+"\nNo. of Comparisons : "+idx);
                     }
                     builder.create().show();
                 }else{
@@ -64,9 +65,10 @@ public class SearchLB extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean found=false;
+                int count=0;
                 if(list.getText().toString().length()>0&&item.getText().length()>0){
                     long start=System.currentTimeMillis();
-                    String[] listvalues=list.getText().toString().trim().split(" ");
+                    String[] listvalues=list.getText().toString().trim().split(",");
                     int[] a=new int[listvalues.length];
                     for(int i=0;i<a.length;i++){
                         a[i]=Integer.parseInt(listvalues[i].trim());
@@ -74,6 +76,7 @@ public class SearchLB extends AppCompatActivity {
                     Arrays.sort(a);
                     int beg=0,end=a.length-1,mid=0;
                     while (beg<=end){
+                        count++;
                         mid=(beg+end)/2;
                         if(a[mid]==Integer.parseInt(item.getText().toString().trim())){
                             found=true;
@@ -89,9 +92,9 @@ public class SearchLB extends AppCompatActivity {
                     builder.setTitle("Binary Search");
                     long finish=System.currentTimeMillis();
                     if (found){
-                        builder.setMessage("\'"+item.getText().toString()+"\'"+" found at "+(mid+1)+" position (Sorted List)"+"\nTime taken "+(finish-start)+" milliseconds");
+                        builder.setMessage("\'"+item.getText().toString()+"\'"+" found at "+(mid+1)+" position (Sorted List)"+"\nTime taken "+(finish-start)+" milliseconds"+"\nNo. of Comparisons : "+count);
                     }else{
-                        builder.setMessage("\'"+item.getText().toString()+"\'"+" not found"+"\nTime taken "+(finish-start)+" milliseconds");
+                        builder.setMessage("\'"+item.getText().toString()+"\'"+" not found"+"\nTime taken "+(finish-start)+" milliseconds"+"\nNo. of Comparisons : "+count);
                     }
                     builder.create().show();
                 }else{
