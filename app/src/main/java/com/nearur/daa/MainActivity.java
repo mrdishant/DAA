@@ -138,6 +138,9 @@ public class MainActivity extends AppCompatActivity
                     case 3:
                         intent=new Intent(MainActivity.this,QuickSort.class);
                         break;
+                    case 4:
+                        intent=new Intent(MainActivity.this,Knapsack.class);
+                        break;
 
                 }
                 startActivity(intent);

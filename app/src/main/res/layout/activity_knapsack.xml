@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nearur.daa.Knapsack">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.nearur.daa.Knapsack">
+
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="KnapSack Problem" />
+
+    <EditText
+        android:id="@+id/editTextnum"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Number of Items"
+        android:inputType="phone" />
+
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:id="@+id/bt1"
+            android:textSize="20dp"
+            android:text="Decreasing Ratio(V/W)"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton
+            android:id="@+id/bt2"
+            android:textSize="20dp"
+            android:text="Decreasing Value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <RadioButton
+            android:id="@+id/bt3"
+            android:textSize="20dp"
+            android:text="Increasing Weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttongo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="Go" />
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/capacity"
+        android:visibility="gone"
+        android:inputType="number"
+        android:hint="Capacity ?" />
+
+    <ListView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/listview"
+        android:layout_height="320dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonresult"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        android:text="Result"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textSize="24dp"/>
+
+
+
+</LinearLayout>
+</ScrollView>

@@ -22,7 +22,8 @@
         <activity android:name=".SearchLB" />
         <activity android:name=".SortIS" />
         <activity android:name=".MergeSort" />
-        <activity android:name=".QuickSort"></activity>
+        <activity android:name=".QuickSort" />
+        <activity android:name=".Knapsack"></activity>
     </application>
 
 </manifest>
